@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="This banner use animated SVG mask to animate dropping logo letters and 3d animation of the card.">
+    <title>Header Banner Animation</title>
     <script src="main.js" defer></script>
 </head>
-<body class="bg-red-400 min-h-screen">
-    <header>
-        Header
+<body>
+    <header class="header_container">
+        <div class="header_background" style="background-image: url('assets/cards.webp');">
+            <object data="assets/joker-text.svg" type="image/svg+xml" id="animated_text">
+        </div>
+        <div id="card_container">
+            <div id="card">
+                <div class="card_awers">
+                    <img src="assets/jcard_awers.webp" alt="joker card awers">
+                </div>
+                <div class="card_rewers">
+                    <img src="assets/jcard-rewers.webp" alt="joker card rewers">
+                </div>
+            </div>
+        </div>
     </header>
     <main>
-        <section>
-            Hello World!!! Let's start!!
-        </section>
+        <section></section>
     </main>
-    <footer>
-        Footer
-    </footer>
+    <footer></footer>
 </body>
 </html>

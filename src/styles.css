@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  width: 100%;
+}
+
+.header_container {
+  position: relative;
+}
+
+/* ANIMATED LOGO */
+.header_background {
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+}
+
+#animated_text {
+  display: block;
+}
+
+/* JOKER CARD */
+#card_container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 10;
+  perspective: 1400px;
+  animation: 16s linear infinite paused opacity_animation;
+}
+
+#card {
+  position: relative;
+  left: 37%;
+  width: 26%;
+  transform-style: preserve-3d;
+  animation: 
+    16s linear infinite paused card_animation;
+}
+
+.card_awers {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.card_rewers {
+  position: absolute;
+  transform: rotateY(180deg);
+  top: 0;
+  left: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.card_awers img, .card_rewers img {
+  display: block;
+  width: 100%;
+}
+
+@keyframes card_animation {
+  0% {
+    transform: rotate3d(1, 10, 1, 20deg) scale(0.3);
+  }
+  50% {
+    transform: rotate3d(1, 10, 1, 20deg) scale(0.3);
+  }
+  60% {
+    transform: rotate3d(1, 10, 1, 245deg) scale(1);
+  }
+  66% {
+    transform: rotate3d(1, 10, 1, 380deg) scale(1);
+  }
+  84% {
+    transform: rotate3d(1, 10, 1, 380deg) scale(1);
+  }
+  90% {
+    transform: rotate3d(1, 10, 1, 515deg) scale(1);
+  }
+  100% {
+    transform: rotate3d(1, 10, 1, 740deg) scale(0.3);
+  }
+}
+
+@keyframes opacity_animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

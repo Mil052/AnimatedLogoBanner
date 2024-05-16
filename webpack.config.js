@@ -17,7 +17,7 @@ module.exports = {
   },
   devtool: 'eval-source-map',
   devServer: {
-    static: './build',
+    static: 'src/assets',
     watchFiles: ['src/**/*']
   },
   module: {
